@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inline-Block Grid</title>
+
+	<style type="text/css">
+
+
+/* ======== GLOBAL ======== */
+
+		body, div {
+			margin: 0;
+			padding: 0;
+			font-family: helvetica;
+		}
+
+
+/* ======== GRID ======== */
+
+		.box {
+			padding: 0 15px;
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+
+		.row {
+			margin: 0 -15px;
+		}
+
+		.panel {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 15px;
+			box-sizing: border-box;
+		}
+		
+		.panel-1,
+		.panel-2,
+		.panel-3,
+		.panel-4,
+		.panel-5,
+		.panel-6,
+		.panel-7,
+		.panel-8,
+		.panel-9,
+		.panel-10,
+		.panel-11,
+		.panel-12 {
+			width: 100%;
+		}
+
+
+/* ======== DESIGN ======== */
+
+		h1 {
+			color: #ffffff;
+		}
+
+		small {
+			font-weight: 300;
+			margin: 0 15px;
+		}
+
+		p {
+			color: #ffffff;
+			font-size: 16px;
+		}
+
+		.dark {
+			background-color: #333333;
+		}
+
+		.light {
+			background-color: #666666;
+		}
+
+		.lighter {
+			background-color: #888888;
+		}
+
+		.main {
+			margin-top: 20px;
+		}
+
+
+/* ======== MEDIA QUERIES ======== */
+
+		@media (min-width: 768px) {
+			.box {
+				width: 750px;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.row {
+			 	display: flex;
+			}
+
+			.box {
+				width: 970px;
+			}
+
+			.panel-1 {
+				width: 8.34%;
+			}
+
+			.panel-2 {
+				width: 16.67%;
+			}
+
+			.panel-3 {
+				width: 25%;
+			}
+
+			.panel-4 {
+				width: 33.33%;
+			}
+
+			.panel-5 {
+				width: 41.67%;
+			}
+
+			.panel-6 {
+				width: 50%;
+			}
+
+			.panel-7 {
+				width: 58.34%;
+			}
+
+			.panel-8 {
+				width: 66.66%;
+			}
+
+			.panel-9 {
+				width: 75%;
+			}
+
+			.panel-10 {
+				width: 83.34%;
+			}
+
+			.panel-11 {
+				width: 91.66%;
+			}
+
+			.panel-12 {
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.box {
+				width: 1170px;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+		
+		<section class="dark">
+			<header class="box">
+				<div class="row">
+					<div class="panel panel-12">
+						<h1>Cobble <small>a responsive grid system with a difference</small></h1>
+					</div>
+				</div>
+			</header>
+		</section>
+
+		<section class="box">
+			<div class="row main">
+					<article class="panel panel-8 lighter">
+						<p>This is a demonstration of a responsive grid system using inline-block columns instead of floating ones. It also makes use of HTML5 semantic elements for easier reading.</p>
+						<p>The system otherwise borrows from the popular responsive framework, Twitter Bootstrap. Namely the container &mdash; row &mdash; column system and the container width breakpoints. It also supports the 12 column grid as this provides the most flexible page divisibility</p>
+						<p>This example uses the HTML5 Section element as the containing div. The container class is "box".</p>
+						<p>The "row" class can be applied to any HTML block level element, just like it can in Bootstrap. The columns are called "panel". In this case I have applied the column classes to the Article and Aside elements.</p>
+						<p>To create a column, use the class 'panel' combined with the class 'panel-*', where '*' is the number of columns you want the panel to span.</p>
+					</article>
+					<aside class="panel panel-4 light">
+						<p>The same coding rules apply to the classes here as to Bootstrap classes: Rows must be placed inside containers; columns inside rows; rows containing other columns can be nested inside columns; and containers must not be placed inside containers.</p>
+						<p>I have also used the Flex display property on the Row class at medium and large screen sizes, which means that columns with less content than their siblings will still extend vertically to fill the row when arranged inline. When stacked, the rows become block elements. This eliminates the need for a clearfix.</p>
+						<p>This grid system is designed to be 'mobile-first', meaning that the grid CSS foundations have been designed to fit the smallest screen sizes by default and the media queries adapt the layout for larger screens when necessary.</p>
+					</aside>
+			</div>	
+		</section>
+
+</body>
+</html>
